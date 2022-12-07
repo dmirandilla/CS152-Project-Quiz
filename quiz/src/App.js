@@ -84,10 +84,14 @@ export default function App() {
 						<div className='question-text'>{questions[currentQuestion].questionText}</div>
 						<div>{questions[currentQuestion].img}</div>
 					</div>
+
 					<div className='answer-section'>
+
 						{questions[currentQuestion].answerOptions.map((answerOption) => (
 							<button onClick={() => handleAnswerOptionClick(answerOption.isCorrect)}>{answerOption.answerText}</button>
 						))}
+						
+		
 					</div>
 				</>
 			)}
