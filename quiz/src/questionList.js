@@ -1,4 +1,5 @@
 import MyImage from './img/Q3.png'
+import Haskell from './img/Q13.png'
 import React from 'react';
 
 export const Question1 =  [
@@ -65,7 +66,7 @@ export const Question1 =  [
         answerOptions: [
             { answerText: 'captures the essence of object oriented programming', isCorrect: false },
             { answerText: 'good for long-running workloads and complex functions', isCorrect: false },
-            { answerText: 'captures some of the essential, common features of a wide variety of programming languages', isCorrect: true },
+            { answerText: 'captures the essential and common features of a wide variety of programming languages', isCorrect: true },
             { answerText: 'because it helps you understand the underlying concept of all programming lanugages', isCorrect: false },
         ],
     }, 
@@ -91,7 +92,7 @@ export const Question1 =  [
         questionText: 'What type of language is prolog?',
         answerOptions: [
             { answerText: 'function based', isCorrect: false },
-            { answerText: 'objected based', isCorrect: false },
+            { answerText: 'object oriented', isCorrect: false },
             { answerText: 'script', isCorrect: false },
             { answerText: 'logic based', isCorrect: true },
         ],
@@ -117,30 +118,31 @@ export const Question1 =  [
         ],
     }, 
     {
-        questionText: 'What does ((λx.((λy.(x y))x))(λz.w)) reduce to?',
+        questionText: 'What is the output of the following code:  ',
+        img: <img src={Haskell}/>,
         answerOptions: [
-            { answerText: 'yz', isCorrect: false },
-            { answerText: 'xy', isCorrect: false },
-            { answerText: 'z', isCorrect: true },
-            { answerText: 'x', isCorrect: false },
+            { answerText: '[]', isCorrect: false },
+            { answerText: '[1, 5, 6]', isCorrect: true },
+            { answerText: '[4, 2, 1]', isCorrect: false },
+            { answerText: '[6 , 5, 1]', isCorrect: false },
         ],
     },
     {
-        questionText: "What does ((λf.((λg.((f f)g))(λh.(k h))))(λx.(λy.y))) reduce to?",
+        questionText: "What does the :- symbol mean in Prolog?",
         answerOptions: [
-            { answerText: '(λf.(kf))', isCorrect: false },
-            { answerText: '(λg.(kg))', isCorrect: false },
-            { answerText: '(λh.(kh))', isCorrect: true },
-            { answerText: '(λk.k)', isCorrect: false },
+            { answerText: 'used in rules to separate the head from the body', isCorrect: true },
+            { answerText: 'serves to define the Type and Precedence of infix and postfix', isCorrect: false },
+            { answerText: 'negation-as-failure, negation in Prolog', isCorrect: false },
+            { answerText: 'used in functions to separate the head form the body', isCorrect: false },
         ],
     }, 
     {
-        questionText: 'does (λg.((λf.((λx.(f (x x)))(λx.(f (x x))))) g)) reduce?',
+        questionText: 'What is an atom in Prolog?',
         answerOptions: [
-            { answerText: 'yes to (λg.g)', isCorrect: false },
-            { answerText: 'yes to (λx.x)', isCorrect: false },
-            { answerText: 'yes to (λf.f)', isCorrect: false },
-            { answerText: 'no', isCorrect: true },
+            { answerText: 'unbounded integers and rational numbers', isCorrect: false },
+            { answerText: 'a unit composed a functor and a number of arguments', isCorrect: false },
+            { answerText: 'are denoted by a string consisting of letters', isCorrect: false },
+            { answerText: 'general-purpose name with no inherent meaning', isCorrect: true },
         ],
     },
 	];
