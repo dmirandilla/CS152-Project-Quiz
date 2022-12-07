@@ -35,9 +35,8 @@ export default function App() {
 				<div className='score-section'>
 					<div className="restart">
 						<text className="restart" >You scored {score} out of {questions.length}</text>
-						<button onClick={() => reset()}  className="restart"> Try again? </button>
 					</div> 
-					
+					<button onClick={() => reset()}  className="restart"> Try again? </button>
 				</div>
 			) : (
 				<>
@@ -51,10 +50,13 @@ export default function App() {
 
 						<div className='answer-section'>
 							{questions[currentQuestion].answerOptions.map((answerOption) => (
+							<div className='space'>
 							<button className='answer-section' onClick={() => handleAnswerOptionClick(answerOption.isCorrect)}>
 								{answerOption.answerText}
 							</button>
+							</div>
 								))}
+							
 						</div>
 					</div>
 
