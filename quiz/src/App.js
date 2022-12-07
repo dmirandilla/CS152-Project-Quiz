@@ -32,12 +32,23 @@ export default function App() {
 	return (
 		<div className='app'>
 			{showScore ? (
+				<> 
 				<div className='score-section'>
 					<div className="restart">
 						<text className="restart" >You scored {score} out of {questions.length}</text>
-					</div> 
-					<button onClick={() => reset()}  className="restart"> Try again? </button>
+					</div>
+
+					<div className="padder"> 
+						<button className="spacer" onClick={() => reset()}> Try again? </button>
+					</div>
+					
 				</div>
+
+				<div> 
+
+				</div>
+				
+				</>
 			) : (
 				<>
 					<div className='question-section'>
