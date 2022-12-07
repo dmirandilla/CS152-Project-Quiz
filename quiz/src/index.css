@@ -39,7 +39,7 @@ body {
 
 /* QUESTION/TIMER/LEFT SECTION */
 .question-section {
-  width: 100%;
+  width: 130%;
   position: relative;
 }
 
@@ -74,7 +74,7 @@ body {
 }
 
 button {
-  width: 100%;
+  width: 75%;
   font-size: 16px;
   color: #000000;
   background-color: #edf6f9;
@@ -85,6 +85,7 @@ button {
   align-items: center;
   border: 5px solid #98afb7;
   cursor: pointer;
+  text-align: center;
 }
 
 .correct {
@@ -106,4 +107,5 @@ button:focus {
 button svg {
   margin-right: 5px;
 }
+
 
