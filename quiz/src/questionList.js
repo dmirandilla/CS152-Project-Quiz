@@ -2,7 +2,7 @@ import MyImage from './img/Q3.png'
 import Haskell from './img/Q13.png'
 import React from 'react';
 
-export const Question1 =  [
+export const bank =  [
     {
         questionText: 'In a regular expression what does the * indicate?',
         answerOptions: [
@@ -145,6 +145,17 @@ export const Question1 =  [
             { answerText: 'general-purpose name with no inherent meaning', isCorrect: true },
         ],
     },
+
+    {
+        questionText: 'Is CS 152 a great class?',
+        answerOptions: [
+            { answerText: 'absolutely', isCorrect: false },
+            { answerText: 'certainly', isCorrect: false },
+            { answerText: 'yes sir!', isCorrect: false },
+            { answerText: 'all of the above', isCorrect: true },
+        ],
+    }
+
 	];
 
  
