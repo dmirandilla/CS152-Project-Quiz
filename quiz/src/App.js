@@ -5,17 +5,12 @@ import Question from './components/question';
 
 export default function App() {
 
-	function reset() {
-		setCurrentQuestion(0)
-		setShowScore(false)
-		setScore(0);
-	}
-
+	//state hooks here to track current questio, correct/wrong answers, and quiz score 
 	const [currentQuestion, setCurrentQuestion] = useState(0);
 	const [showScore, setShowScore] = useState(false);
 	const [score, setScore] = useState(0);
 
-	//pass in question
+	//pass in question information to Question component, 15 lines vs 100+ lines of question data 
 	const questions = [
 		<Question questionText={bank[0].questionText} answerOptions={bank[currentQuestion].answerOptions} />,
 		<Question questionText={bank[1].questionText} answerOptions={bank[currentQuestion].answerOptions} />,
@@ -34,10 +29,17 @@ export default function App() {
 		<Question questionText={bank[14].questionText} answerOptions={bank[currentQuestion].answerOptions} />
 	]
 
-
+	//one way to passing in another question question or just simply add to the array above
 	questions.push(<Question questionText={bank[15].questionText} answerOptions={bank[currentQuestion].answerOptions} />)
 
+	//this function resets the score and state to restart the quiz 
+	function reset() {
+		setCurrentQuestion(0)
+		setShowScore(false)
+		setScore(0);
+	}
 
+	//manages state to handle score and track current question 
 	const handleAnswerOptionClick = (isCorrect) => {
 		if (isCorrect) {
 			setScore(score + 1);
@@ -51,7 +53,10 @@ export default function App() {
 		}
 	};
 
+
 	return (
+		//if quiz is done, display the score
+		//else show quiz questions (iterate through questions)
 		<div className='app'>
 			{showScore ? (
 				<>
@@ -63,19 +68,11 @@ export default function App() {
 						<div className="padder">
 							<button className="spacer" onClick={() => reset()}> Try again? </button>
 						</div>
-
 					</div>
-
-					<div>
-
-					</div>
-
 				</>
 			) : (
 				<>
-			
 					<div className='question-section'>
-
 
 						<div className='question-count'>
 							<span>Question {currentQuestion + 1}</span>/{questions.length}
@@ -91,12 +88,8 @@ export default function App() {
 									</button>
 								</div>
 							))}
-
 						</div>
 					</div>
-
-
-
 				</>
 			)}
 		</div>
