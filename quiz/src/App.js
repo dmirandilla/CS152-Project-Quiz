@@ -5,7 +5,7 @@ import Question from './components/question';
 
 export default function App() {
 
-	//state hooks here to track current questio, correct/wrong answers, and quiz score 
+	//state hooks here to track current question, quiz score, and displaying score 
 	const [currentQuestion, setCurrentQuestion] = useState(0);
 	const [showScore, setShowScore] = useState(false);
 	const [score, setScore] = useState(0);
